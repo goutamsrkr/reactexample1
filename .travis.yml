@@ -8,3 +8,13 @@ before-install:
 script:
     - docker run react-web npm run test -- --coverage
     
+
+deploy:
+    provider: elasticbeanstalk
+    region: "ap-south-1"
+    app: "docker"
+    env: "ReactApp-env"
+    bucket_name: "elasticbeanstalk-ap-south-1-538634141848"
+    bucket_path: "reactapp"
+    on:
+        branch: master    
