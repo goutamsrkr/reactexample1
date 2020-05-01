@@ -3,11 +3,10 @@ services:
     - docker
 
 before-install:
-    - docker build -t react-web -f Dockerfile.dev .
+    - docker build -t goutamsarkar/docker-react -f Dockerfile.dev .
 
 script:
-    - bundle exec rake test
-#     - docker run react-web npm run test -- --coverage
+    - docker run goutamsarkar/docker-react npm run test -- --coverage
     
 
 deploy:
