@@ -3,7 +3,7 @@ services:
     - docker
 
 before-install:
-    - docker build -t react-web -f Dockerfile.dev .
+    - docker build -t react-web -f Dockerfile .
 
 script:
     - docker run react-web npm run test -- --coverage
