@@ -5,8 +5,8 @@ services:
 before-install:
     - docker build -t react-web -f Dockerfile .
 
-script:
-    - docker run react-web npm run test -- --coverage
+# script:
+#     - docker run react-web npm run test -- --coverage
     
 
 deploy:
