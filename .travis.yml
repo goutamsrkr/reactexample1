@@ -5,7 +5,8 @@ services:
 before-install:
     - docker build -t react-web -f Dockerfile.dev .
 
-# script:
+script:
+    - bundle exec rake test
 #     - docker run react-web npm run test -- --coverage
     
 
